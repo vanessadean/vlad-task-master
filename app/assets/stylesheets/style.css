@@ -91,12 +91,23 @@ input[type="submit"]:hover {
   box-shadow: 2px 2px 0px rgba(255,0,0,.5);
 }
 
+p {
+  color:#666;
+}
+
 h1 {
   color:#fff;
   text-shadow: 2px 2px 0px #333;
   margin:0 0 10px;
   font-size:32px;
   font-weight:bold;
+}
+
+h2 {
+  color:#333;
+  margin:0 0 10px;
+  font-size:24px;
+  padding-top: 10px;
 }
 
 li {
