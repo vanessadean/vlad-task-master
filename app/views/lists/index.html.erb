@@ -1,8 +1,12 @@
 <h2>task lists</h2>
 
 <ul>
-  <%= @lists.each do |list| %>
-    <li><%= link_to list.title, list %></li>
+  <% @lists.each do |list| %>
+    <li>
+      <%= link_to list.title, list %> 
+      <%= link_to 'Edit', edit_list_path(list) %> 
+      <%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
   <% end %>
 </ul>
 

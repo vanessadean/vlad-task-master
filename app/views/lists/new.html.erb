@@ -1,8 +1,19 @@
-<h2>create a new list</h2>
+<h2>Create a new list</h2>
 
 <%= render 'form' %>
+<%= render 'tasks/form' %>
+
 
 <section id="lists">
+  <% @lists.each do |list| %>
+    <div class="list">
+  <h2>
+    <button class="destroy-list"><%= link_to 'X', list, method: :delete, data: { confirm: 'Are you sure?' } %></button><%= list.title %>
+  </h2>
+  <ul id="list-<%= list.id %>" data-id="<%= list.id %>">
+  </ul>
+</div>
+  <% end %>
 </section>
 
-<%= link_to 'Back', lists_path %>
+<h2><%= link_to 'View Lists', lists_path %></h2>

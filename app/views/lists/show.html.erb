@@ -1,10 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <h2><%= @list.title %></h2>
+<ul>
+<% @list.tasks.each do |task| %>
+  <li>Task: <%= task.description %></li>
+  <li>Priority: <%= task.priority %></li>
+<% end %>
+</ul>
+
 <p><%= link_to 'Edit Title', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>
 </p>
 </br>
 
-<%= render 'tasks/add_tasks' %>
+<%= render 'tasks/form' %>
 

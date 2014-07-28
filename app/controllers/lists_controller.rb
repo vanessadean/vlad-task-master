@@ -10,10 +10,13 @@ class ListsController < ApplicationController
   # GET /lists/1
   # GET /lists/1.json
   def show
+    @task = Task.new
   end
 
   # GET /lists/new
   def new
+    @task = Task.new
+    @lists = List.all
     @list = List.new
   end
 
@@ -28,7 +31,7 @@ class ListsController < ApplicationController
 
     respond_to do |format|
       if @list.save
-        format.html { redirect_to @list, notice: 'List was successfully created.' }
+        format.html { redirect_to root_path, notice: 'List was successfully created.' }
         format.json { render :show, status: :created, location: @list }
       else
         format.html { render :new }
@@ -56,7 +59,7 @@ class ListsController < ApplicationController
   def destroy
     @list.destroy
     respond_to do |format|
-      format.html { redirect_to lists_url, notice: 'List was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'List was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
