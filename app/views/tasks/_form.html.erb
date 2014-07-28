@@ -13,7 +13,9 @@
 
   <p>Add a new task:</p></br>
 
-  <%= f.collection_select, :id, List.all, :id, :title %>
+  <div class="field">
+  <%= f.collection_select :id, List.all, :id, :title %>
+  </div>
 
   <div class="field">
     <%= f.label :description %>
