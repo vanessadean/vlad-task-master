@@ -7,6 +7,7 @@ html {
   background: -ms-linear-gradient(top,  #cee1ed 0%,#85b2d3 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #cee1ed 0%,#85b2d3 100%); /* W3C */
   background-size: cover;
+  background-image: url('http://images.fanpop.com/images/image_uploads/Bran-Castle---Vlad-the-Impaler-vampires-345857_1687_1125.jpg');
   height: 100%;
   min-height: 100%;
 }
@@ -103,8 +104,17 @@ h1 {
   font-weight:bold;
 }
 
+a {
+  color:#fff;
+  text-shadow: 2px 2px 0px #333;
+  margin:0 0 10px;
+  font-size:32px;
+  font-weight:bold;
+  text-decoration: none;
+}
+
 h2 {
-  color:#333;
+  color:#fff;
   margin:0 0 10px;
   font-size:24px;
   padding-top: 10px;

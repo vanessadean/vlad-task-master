@@ -11,9 +11,16 @@
     <button class="destroy-list"><%= link_to 'X', list, method: :delete, data: { confirm: 'Are you sure?' } %></button><%= list.title %>
   </h2>
   <ul id="list-<%= list.id %>" data-id="<%= list.id %>">
+    <% list.tasks.each do |task| %>
+    <p>
+    <button class="destroy-task"><%= link_to 'X', task, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+    Task:<%= task.description %><br />
+    Priority: <%= task.priority %>
+    </p>
+
+    <br>
+    <% end %>
   </ul>
 </div>
   <% end %>
 </section>
-
-<h2><%= link_to 'View Lists', lists_path %></h2>

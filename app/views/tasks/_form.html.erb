@@ -14,7 +14,7 @@
   <p>Add a new task:</p></br>
 
   <div class="field">
-  <%= f.collection_select :id, List.all, :id, :title %>
+  <%= f.collection_select :list_id, List.all, :id, :title %>
   </div>
 
   <div class="field">
@@ -25,8 +25,6 @@
     <%= f.label :priority %>
     <%= f.text_field :priority, id: 'task_priority'%>
   </div>
-
-  <%= f.hidden_field :list_id, :value => @list.id %>
 
   <div class="actions">
     <%= f.submit %>
