@@ -1,0 +1,6 @@
+<form id="add_list" action="/lists" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <label for="list_title">Add a new list:</label>
+  <input type="text" id="list_title" name="title" placeholder="title">
+  <input type="submit" value="(+) add">
+</form><!-- #add_list -->
