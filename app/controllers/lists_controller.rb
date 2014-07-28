@@ -31,6 +31,7 @@ class ListsController < ApplicationController
 
     respond_to do |format|
       if @list.save
+        format.js
         format.html { redirect_to root_path, notice: 'List was successfully created.' }
         format.json { render :show, status: :created, location: @list }
       else
@@ -59,6 +60,7 @@ class ListsController < ApplicationController
   def destroy
     @list.destroy
     respond_to do |format|
+      format.js
       format.html { redirect_to root_path, notice: 'List was successfully destroyed.' }
       format.json { head :no_content }
     end

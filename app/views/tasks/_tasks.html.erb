@@ -1,0 +1,5 @@
+ <p>
+    <button class="destroy-task"><%= link_to 'X', task, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+    Task:<%= task.description %><br />
+    Priority: <%= task.priority %>
+</p>

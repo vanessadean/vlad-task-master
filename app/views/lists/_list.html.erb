@@ -1,6 +1,6 @@
 <div class="list">
   <h2>
-    <button class="destroy-list" data-id="<%= @list.id %>">X</button><%= @list.title %>
+    <button class="destroy-list"><%= link_to 'X', list, method: :delete, data: { confirm: 'Are you sure?' } %></button><%= @list.title %>
   </h2>
   <ul id="list-<%= @list.id %>" data-id="<%= @list.id %>">
   </ul>
